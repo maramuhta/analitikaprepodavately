@@ -776,6 +776,22 @@ tr.spec-highlight td {
 .norms-table tr:last-child td { border-bottom: none; }
 .norms-table td:first-child { text-align: left; font-weight: 500; }
 .norms-table td.null-norm { color: #bbb; }
+
+/* ── Таблица динамики по преподавателям ── */
+.dyn-table { width:100%; border-collapse:collapse; font-family:'Montserrat',sans-serif; font-size:13px; margin-bottom:1rem; }
+.dyn-table th { background:#2C2C2A; color:#FDF6F0; padding:8px 10px; text-align:center; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; white-space:nowrap; }
+.dyn-table th:first-child { text-align:left; min-width:160px; }
+.dyn-cur-hdr { background:#5C6937 !important; }
+.dyn-table td { padding:7px 10px; border-bottom:1px solid #EDE8E0; text-align:center; color:#2C2C2A; white-space:nowrap; }
+.dyn-table tr:nth-child(even) td { background:#FAF7F2; }
+.dyn-name { text-align:left !important; font-weight:600; color:#2C2C2A; }
+.dyn-cur-val { font-weight:700; color:#2C2C2A; }
+.dyn-empty { color:#ccc; font-weight:400; }
+.dyn-up { color:#5C6937; font-weight:700; }
+.dyn-dn { color:#c0392b; font-weight:700; }
+.dyn-eq { color:#999; font-weight:400; }
+.dyn-new { color:#F0803B; font-size:11px; }
+
 </style>
 </head>
 <body>
@@ -990,6 +1006,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1058,6 +1076,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1124,6 +1144,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1191,6 +1213,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1335,6 +1359,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1405,6 +1431,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1473,6 +1501,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1544,6 +1574,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2348,6 +2380,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2418,6 +2452,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2487,6 +2523,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2558,6 +2596,8 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
+<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
+<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2606,6 +2646,7 @@ function showMonth(monthId, clickedBtn) {
   });
   if (clickedBtn) clickedBtn.classList.add('active');
   showPage('obshchaya', document.querySelector('.page-btn[data-page="obshchaya"]'));
+  updateDynamics();
 }
 
 function showPage(pageId, clickedBtn) {
@@ -2623,6 +2664,7 @@ function showPage(pageId, clickedBtn) {
   });
   if (clickedBtn) clickedBtn.classList.add('active');
   filterNormsTable(pageId);
+  updateDynamics();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2631,6 +2673,891 @@ function filterNormsTable(pageId) {
     row.style.display = (pageId === 'obshchaya' || row.dataset.hall === pageId) ? '' : 'none';
   });
 }
+
+/* ── Динамика по преподавателям ── */
+var DYNAMICS_DATA = {
+  "dmitrovka": {
+    "—": {
+      "ian": 15.6,
+      "fev": 12.0,
+      "apr": 11.6
+    },
+    "Рышков Александр": {
+      "ian": 15.8,
+      "fev": 15.2,
+      "mart": 16.5,
+      "apr": 17.5,
+      "mai": 16.5
+    },
+    "Шарапова Виктория": {
+      "ian": 10.6,
+      "fev": 10.8,
+      "mart": 10.2,
+      "apr": 11.8,
+      "mai": 15.1
+    },
+    "Назарова Даша": {
+      "ian": 23.1,
+      "fev": 23.2,
+      "mart": 23.0,
+      "apr": 22.5,
+      "mai": 22.3
+    },
+    "Атаманова Елена": {
+      "ian": 23.1,
+      "fev": 24.7,
+      "mart": 22.9,
+      "apr": 24.6,
+      "mai": 21.9
+    },
+    "Рябова Катерина": {
+      "ian": 13.9,
+      "fev": 17.0,
+      "mart": 21.2,
+      "apr": 15.2,
+      "mai": 13.9
+    },
+    "Слуцкая Анна": {
+      "ian": 7.4,
+      "fev": 10.8,
+      "mart": 10.6,
+      "apr": 9.9,
+      "mai": 12.4
+    },
+    "Кашанги Мария": {
+      "ian": 19.5,
+      "fev": 13.4,
+      "mart": 16.2,
+      "apr": 11.0,
+      "mai": 14.2
+    },
+    "Селихова Светлана": {
+      "ian": 11.1,
+      "fev": 10.6,
+      "mart": 8.8,
+      "apr": 10.5,
+      "mai": 7.4
+    },
+    "Смирнова Анна": {
+      "ian": 9.2,
+      "fev": 9.9,
+      "mart": 13.5,
+      "apr": 12.6,
+      "mai": 8.8
+    },
+    "Барышников Дмитрий": {
+      "ian": 5.2,
+      "fev": 4.9,
+      "mart": 6.0,
+      "apr": 6.4,
+      "mai": 4.6
+    },
+    "Павлов Юрий": {
+      "ian": 11.5,
+      "fev": 14.7,
+      "mart": 16.7,
+      "apr": 15.9,
+      "mai": 13.0
+    },
+    "Старостина Анастасия": {
+      "ian": 9.8,
+      "fev": 8.8,
+      "mart": 9.3,
+      "apr": 9.5,
+      "mai": 12.3
+    },
+    "Муравьев Денис": {
+      "ian": 7.3,
+      "apr": 10.0
+    },
+    "Лисецкая Арина": {
+      "ian": 14.9,
+      "fev": 13.6,
+      "mart": 13.6
+    },
+    "Зареченская Мария": {
+      "ian": 6.4,
+      "fev": 7.4
+    },
+    "Лисова Виктория": {
+      "ian": 14.8,
+      "mai": 12.8
+    },
+    "Юдина Настя": {
+      "ian": 11.1,
+      "fev": 10.6,
+      "mart": 13.7,
+      "apr": 10.6,
+      "mai": 11.8
+    },
+    "Кошкарова Татьяна": {
+      "ian": 21.8,
+      "fev": 21.4,
+      "mart": 24.7,
+      "apr": 20.0
+    },
+    "Мишина Ольга": {
+      "ian": 12.0,
+      "fev": 12.1,
+      "mart": 12.9,
+      "apr": 12.4,
+      "mai": 13.1
+    },
+    "Седов Александр": {
+      "ian": 6.0,
+      "fev": 5.4,
+      "mart": 5.8,
+      "apr": 5.1,
+      "mai": 5.4
+    },
+    "Хейлик Юлия": {
+      "ian": 5.7
+    },
+    "Куксенко Богдан": {
+      "ian": 8.2,
+      "fev": 10.8,
+      "mart": 11.5,
+      "apr": 11.8,
+      "mai": 6.2
+    },
+    "Арно Тоня (удален) (удален)": {
+      "ian": 24.2,
+      "fev": 23.5
+    },
+    "Григорьева Дарья": {
+      "ian": 21.5,
+      "fev": 27.3,
+      "apr": 14.9,
+      "mai": 17.9
+    },
+    "Каррион Карина": {
+      "ian": 14.8,
+      "mai": 4.0
+    },
+    "Никитина Евгения": {
+      "ian": 14.8,
+      "fev": 14.0,
+      "mart": 14.6,
+      "apr": 16.9,
+      "mai": 18.6
+    },
+    "Соловьева Юлия": {
+      "ian": 8.0,
+      "fev": 13.4,
+      "mart": 15.2,
+      "apr": 14.3,
+      "mai": 15.7
+    },
+    "Трушакова Ксения": {
+      "ian": 20.7,
+      "fev": 22.0,
+      "mart": 17.7,
+      "apr": 20.0,
+      "mai": 17.2
+    },
+    "Десюкевич Валерия": {
+      "ian": 22.0,
+      "fev": 20.0
+    },
+    "Скачев Павел": {
+      "ian": 11.0,
+      "mart": 11.1,
+      "apr": 10.0
+    },
+    "Колбина Анастасия": {
+      "fev": 4.7,
+      "mart": 6.8,
+      "apr": 6.3,
+      "mai": 6.6
+    },
+    "Гордиенко Светлана": {
+      "fev": 23.3,
+      "mart": 14.7,
+      "apr": 18.9,
+      "mai": 14.8
+    },
+    "Комиссарова Ксения": {
+      "fev": 18.8,
+      "mart": 17.8,
+      "apr": 17.8,
+      "mai": 15.6
+    },
+    "Васильева Алина": {
+      "mart": 15.8,
+      "apr": 15.1,
+      "mai": 17.4
+    },
+    "Вершинина Мария": {
+      "mart": 14.7
+    },
+    "Нехочина Ира": {
+      "mart": 14.5
+    },
+    "Обухова Анастасия": {
+      "mart": 11.5,
+      "apr": 8.3,
+      "mai": 8.5
+    },
+    "Павлов Михей": {
+      "apr": 14.0,
+      "mai": 11.6
+    }
+  },
+  "myasnitskaya": {
+    "—": {
+      "ian": 7.3,
+      "fev": 8.0,
+      "apr": 10.4
+    },
+    "Кравченко Дима": {
+      "ian": 10.5,
+      "fev": 10.2,
+      "mart": 9.6,
+      "apr": 11.0,
+      "mai": 11.2
+    },
+    "Шалимова Мария": {
+      "ian": 10.7,
+      "fev": 9.4,
+      "mart": 11.0,
+      "apr": 13.4,
+      "mai": 13.6
+    },
+    "Назарова Даша": {
+      "ian": 15.4,
+      "fev": 13.1,
+      "mart": 12.8,
+      "apr": 12.7,
+      "mai": 15.0
+    },
+    "Павлов Юрий": {
+      "ian": 9.2,
+      "fev": 12.2,
+      "mart": 13.2,
+      "apr": 13.2,
+      "mai": 10.8
+    },
+    "Юдина Настя": {
+      "ian": 18.5,
+      "fev": 19.2,
+      "mart": 19.2,
+      "apr": 19.6,
+      "mai": 19.8
+    },
+    "Родина Любовь": {
+      "ian": 17.1,
+      "fev": 18.3,
+      "mart": 16.9,
+      "apr": 16.3,
+      "mai": 19.2
+    },
+    "Барабаш Татьяна": {
+      "ian": 11.8,
+      "fev": 10.9,
+      "mart": 11.3,
+      "apr": 10.4,
+      "mai": 9.6
+    },
+    "Зареченская Мария": {
+      "ian": 10.4,
+      "fev": 11.0,
+      "mart": 12.3,
+      "apr": 11.8,
+      "mai": 9.6
+    },
+    "Колбина Анастасия": {
+      "ian": 8.2,
+      "fev": 13.5,
+      "mart": 11.0,
+      "apr": 9.3,
+      "mai": 10.0
+    },
+    "Никитина Евгения": {
+      "ian": 15.4,
+      "fev": 13.7,
+      "mart": 16.9,
+      "apr": 20.6,
+      "mai": 20.0
+    },
+    "Обухова Анастасия": {
+      "ian": 7.6,
+      "fev": 10.2,
+      "mart": 9.7,
+      "apr": 7.6,
+      "mai": 8.3
+    },
+    "Пак Феликс": {
+      "ian": 13.4,
+      "fev": 19.4,
+      "mart": 21.8,
+      "apr": 17.5,
+      "mai": 13.6
+    },
+    "Попова Ксения": {
+      "ian": 11.6,
+      "fev": 14.0,
+      "mart": 15.2,
+      "apr": 11.3,
+      "mai": 11.1
+    },
+    "Барышников Дмитрий": {
+      "ian": 5.8,
+      "fev": 5.1,
+      "mart": 5.0,
+      "apr": 5.4,
+      "mai": 5.9
+    },
+    "Грачева Александра (удален) (удален)": {
+      "ian": 11.3,
+      "fev": 10.1,
+      "mart": 6.0
+    },
+    "Лычак Юлия": {
+      "ian": 12.9,
+      "fev": 13.9,
+      "mart": 15.2,
+      "apr": 14.0,
+      "mai": 12.8
+    },
+    "Шадрёнкова Дарья": {
+      "ian": 17.6,
+      "fev": 13.6,
+      "mart": 17.7,
+      "apr": 16.0,
+      "mai": 14.7
+    },
+    "Каррион Карина": {
+      "ian": 9.8,
+      "fev": 6.6,
+      "mart": 9.5,
+      "apr": 6.5,
+      "mai": 10.2
+    },
+    "Пашкина Аля": {
+      "ian": 2.8,
+      "fev": 5.0,
+      "mart": 4.6,
+      "apr": 2.5,
+      "mai": 3.8
+    },
+    "Каурова Олеся (удален) (удален)": {
+      "ian": 10.2
+    },
+    "Минина Наталья": {
+      "ian": 10.4,
+      "fev": 12.8,
+      "mart": 10.5,
+      "apr": 10.0,
+      "mai": 7.0
+    },
+    "Рышков Александр": {
+      "ian": 13.4,
+      "fev": 17.8,
+      "mart": 16.4,
+      "apr": 16.5,
+      "mai": 9.3
+    },
+    "Дмитриева Ксения (удален) (удален)": {
+      "ian": 6.5,
+      "mart": 8.5
+    },
+    "Куксенко Богдан": {
+      "ian": 8.8,
+      "fev": 7.5,
+      "mart": 6.4,
+      "apr": 7.5,
+      "mai": 7.5
+    },
+    "Муравьев Денис": {
+      "ian": 4.5,
+      "fev": 6.2,
+      "mart": 5.6,
+      "apr": 7.6,
+      "mai": 5.1
+    },
+    "Охочинская Наталья": {
+      "ian": 4.2,
+      "fev": 6.3,
+      "mart": 3.6,
+      "apr": 5.3,
+      "mai": 5.5
+    },
+    "Рябова Катерина": {
+      "ian": 13.5,
+      "fev": 9.2,
+      "mart": 11.0,
+      "apr": 10.8,
+      "mai": 12.4
+    },
+    "Бурцева Элина": {
+      "ian": 11.0,
+      "fev": 10.2,
+      "mart": 9.8,
+      "apr": 8.5,
+      "mai": 8.5
+    },
+    "Лисецкая Арина": {
+      "ian": 17.7,
+      "fev": 10.4,
+      "mart": 10.5
+    },
+    "Хейлик Юлия": {
+      "ian": 5.0,
+      "fev": 4.3,
+      "mart": 6.1,
+      "apr": 7.9,
+      "mai": 5.7
+    },
+    "Нездольева Мария": {
+      "ian": 4.0
+    },
+    "Пичугина Мария": {
+      "fev": 10.5,
+      "mart": 6.9,
+      "apr": 6.8,
+      "mai": 7.0
+    },
+    "Зеленая Мария": {
+      "mart": 5.9,
+      "apr": 6.6,
+      "mai": 9.0
+    },
+    "Скачев Павел": {
+      "mart": 4.0,
+      "mai": 6.3
+    },
+    "Васильева Алина": {
+      "apr": 6.3,
+      "mai": 8.3
+    },
+    "Лисова Виктория": {
+      "mai": 11.0
+    },
+    "Березкина Олеся": {
+      "mai": 4.5
+    }
+  },
+  "chernyshevskaya": {
+    "—": {
+      "ian": 6.0,
+      "fev": 4.8,
+      "apr": 5.8
+    },
+    "Вейос Ярослав": {
+      "ian": 7.8,
+      "fev": 6.7,
+      "mart": 9.2,
+      "apr": 14.5,
+      "mai": 13.5
+    },
+    "Кахиани Лика": {
+      "ian": 10.6,
+      "fev": 9.3,
+      "mart": 12.4,
+      "apr": 11.2,
+      "mai": 9.4
+    },
+    "Самарская Виктория": {
+      "ian": 8.5,
+      "fev": 8.8,
+      "mart": 7.7,
+      "apr": 9.7,
+      "mai": 7.4
+    },
+    "Лунегова Александра": {
+      "ian": 4.1,
+      "fev": 4.5,
+      "mart": 4.3,
+      "apr": 7.6,
+      "mai": 5.5
+    },
+    "Соболевская Арина": {
+      "ian": 7.8,
+      "fev": 5.6,
+      "apr": 4.5,
+      "mai": 4.5
+    },
+    "Болсуновская Анна": {
+      "ian": 12.7,
+      "fev": 10.9,
+      "mart": 10.9,
+      "apr": 14.9,
+      "mai": 10.4
+    },
+    "Кочетков Юрий": {
+      "ian": 13.6,
+      "apr": 15.1,
+      "mai": 12.5
+    },
+    "Абаносимов Алексей": {
+      "ian": 5.9,
+      "fev": 6.5,
+      "mart": 5.8,
+      "apr": 8.7
+    },
+    "Дубяго Лидия": {
+      "ian": 5.3,
+      "fev": 6.3,
+      "mart": 6.5,
+      "apr": 7.1,
+      "mai": 6.0
+    },
+    "Казакова Анна": {
+      "ian": 8.1,
+      "fev": 7.6,
+      "mart": 11.6,
+      "apr": 14.6,
+      "mai": 15.5
+    },
+    "Коваленко Марина": {
+      "ian": 6.8,
+      "fev": 3.9,
+      "mart": 6.2,
+      "apr": 7.4,
+      "mai": 6.2
+    },
+    "Спасенко Ольга": {
+      "ian": 5.0,
+      "fev": 4.1,
+      "mart": 4.1,
+      "apr": 8.5,
+      "mai": 5.3
+    },
+    "Белова Полина": {
+      "ian": 6.0,
+      "fev": 5.9,
+      "mart": 9.1,
+      "apr": 6.4,
+      "mai": 7.8
+    },
+    "Туманов Иван": {
+      "ian": 11.5,
+      "fev": 12.3,
+      "mart": 9.4,
+      "apr": 15.7,
+      "mai": 11.2
+    },
+    "Шанти Наталья": {
+      "ian": 9.2,
+      "fev": 11.2,
+      "mart": 15.0,
+      "apr": 17.2,
+      "mai": 12.1
+    },
+    "Буры Лера (удален) (удален)": {
+      "ian": 4.7
+    },
+    "Маврина Оксана": {
+      "ian": 7.7,
+      "fev": 6.2,
+      "mart": 6.2,
+      "apr": 9.1,
+      "mai": 9.0
+    },
+    "Яруцкая Ася": {
+      "ian": 8.7,
+      "mart": 4.0,
+      "apr": 4.0,
+      "mai": 5.2
+    },
+    "Задорожный Олег": {
+      "fev": 7.0,
+      "mart": 5.0,
+      "apr": 6.7,
+      "mai": 4.2
+    },
+    "Кошкарова Татьяна": {
+      "fev": 29.0
+    },
+    "Зинурова Наталья": {
+      "mart": 6.4,
+      "apr": 10.2,
+      "mai": 3.0
+    },
+    "Болтян Андрей": {
+      "mart": 7.2,
+      "apr": 6.3,
+      "mai": 10.0
+    },
+    "Монахова Дарья": {
+      "mart": 11.5,
+      "apr": 13.5,
+      "mai": 7.8
+    },
+    "Лопатина Валерия": {
+      "apr": 10.0,
+      "mai": 6.7
+    }
+  },
+  "nikitskaya": {
+    "—": {
+      "ian": 4.1,
+      "fev": 5.7,
+      "apr": 3.9
+    },
+    "Смирнова Анна": {
+      "ian": 9.5,
+      "fev": 8.5,
+      "mart": 9.6,
+      "apr": 8.8,
+      "mai": 8.5
+    },
+    "Барышников Дмитрий": {
+      "ian": 4.3,
+      "fev": 4.8,
+      "mart": 6.1,
+      "apr": 4.9,
+      "mai": 5.7
+    },
+    "Тертычная Анна": {
+      "ian": 6.2,
+      "fev": 4.6,
+      "mart": 4.9,
+      "apr": 5.1,
+      "mai": 5.8
+    },
+    "Агаркова Юлия": {
+      "ian": 9.1,
+      "fev": 9.5,
+      "mart": 10.8,
+      "apr": 10.6,
+      "mai": 9.4
+    },
+    "Редькина Лариса": {
+      "ian": 3.8,
+      "fev": 3.3,
+      "mart": 4.6,
+      "apr": 3.6,
+      "mai": 4.4
+    },
+    "Павлов Юрий": {
+      "ian": 3.1,
+      "fev": 3.8
+    },
+    "Иванова Марфа": {
+      "ian": 3.3,
+      "fev": 3.5,
+      "mart": 4.8,
+      "apr": 3.2,
+      "mai": 3.3
+    },
+    "Кабаничий Анна": {
+      "ian": 2.8,
+      "fev": 3.4,
+      "mart": 4.4,
+      "apr": 3.9,
+      "mai": 3.9
+    },
+    "Пашкина Аля": {
+      "ian": 3.2,
+      "fev": 3.2,
+      "mart": 3.0,
+      "apr": 3.0,
+      "mai": 2.4
+    },
+    "Хейлик Юлия": {
+      "ian": 3.5,
+      "fev": 3.5,
+      "mart": 1.8,
+      "apr": 3.2,
+      "mai": 3.0
+    },
+    "Колбина Анастасия": {
+      "ian": 4.0,
+      "fev": 3.1,
+      "mart": 4.9,
+      "apr": 4.5,
+      "mai": 2.6
+    },
+    "Нехочина Ира": {
+      "ian": 7.5,
+      "fev": 5.7,
+      "mart": 7.4,
+      "apr": 6.6,
+      "mai": 6.8
+    },
+    "Слуцкая Анна": {
+      "ian": 5.5,
+      "fev": 8.8,
+      "mart": 5.6,
+      "apr": 9.0,
+      "mai": 6.8
+    },
+    "Старостина Анастасия": {
+      "ian": 7.5,
+      "fev": 8.0,
+      "mart": 8.8,
+      "apr": 10.3,
+      "mai": 7.6
+    },
+    "Каррион Карина": {
+      "ian": 9.7,
+      "fev": 2.3,
+      "mart": 2.3,
+      "apr": 8.0,
+      "mai": 3.6
+    },
+    "Лычак Юлия": {
+      "ian": 4.7,
+      "fev": 3.8,
+      "mart": 4.9,
+      "apr": 3.5,
+      "mai": 2.5
+    },
+    "Никитина Евгения": {
+      "ian": 8.7,
+      "mart": 4.5
+    },
+    "Петросян Анна": {
+      "ian": 2.3,
+      "fev": 4.1,
+      "mart": 4.1,
+      "apr": 3.6,
+      "mai": 4.3
+    },
+    "Рышков Александр": {
+      "ian": 5.0,
+      "fev": 4.0,
+      "mart": 5.0,
+      "apr": 4.0,
+      "mai": 3.5
+    },
+    "Зеленая Мария": {
+      "ian": 5.5,
+      "fev": 3.9,
+      "mart": 3.4,
+      "apr": 3.0,
+      "mai": 2.7
+    },
+    "Ким Карина": {
+      "ian": 3.0,
+      "fev": 3.8,
+      "mart": 2.5,
+      "apr": 4.8,
+      "mai": 2.5
+    },
+    "Зареченская Мария": {
+      "fev": 8.4,
+      "mart": 6.5,
+      "apr": 7.2,
+      "mai": 6.5
+    },
+    "Скачев Павел": {
+      "fev": 2.2,
+      "mart": 3.5,
+      "apr": 4.8,
+      "mai": 4.7
+    },
+    "Гордиенко Светлана": {
+      "fev": 3.5,
+      "mart": 2.4,
+      "apr": 1.6,
+      "mai": 3.0
+    },
+    "Комиссарова Ксения": {
+      "fev": 9.0,
+      "mart": 4.8,
+      "apr": 7.3,
+      "mai": 10.0
+    },
+    "Обухова Анастасия": {
+      "fev": 3.0
+    },
+    "Пичугина Мария": {
+      "fev": 10.7,
+      "mart": 11.4,
+      "apr": 10.5,
+      "mai": 9.8
+    },
+    "Березкина Олеся": {
+      "mart": 3.3,
+      "apr": 3.8,
+      "mai": 4.4
+    },
+    "Нездольева Мария": {
+      "mart": 4.0,
+      "apr": 2.6,
+      "mai": 2.8
+    },
+    "Вершинина Мария": {
+      "mai": 3.0
+    }
+  }
+};
+
+function renderDynamicsTable(studioKey) {
+  var teachers = DYNAMICS_DATA[studioKey];
+  if (!teachers || Object.keys(teachers).length === 0)
+    return '<p style="color:#999;font-size:13px">Нет данных</p>';
+
+  var months = ['ian','fev','mart','apr','mai'];
+  var labels = {ian:'Янв',fev:'Фев',mart:'Март',apr:'Апр',mai:'Май'};
+
+  // Сортируем: сначала у кого есть данные за текущий месяц (desc), затем по имени
+  var list = Object.keys(teachers).sort(function(a, b) {
+    var av = (teachers[a][currentMonth] !== undefined) ? teachers[a][currentMonth] : -1;
+    var bv = (teachers[b][currentMonth] !== undefined) ? teachers[b][currentMonth] : -1;
+    if (bv !== av) return bv - av;
+    return a.localeCompare(b, 'ru');
+  });
+
+  var h = '<table class="dyn-table"><thead><tr>';
+  h += '<th>Преподаватель</th>';
+  months.forEach(function(m) {
+    var isCur = (m === currentMonth);
+    h += '<th' + (isCur ? ' class="dyn-cur-hdr"' : '') + '>' + labels[m] + '</th>';
+  });
+  h += '<th>Тренд</th></tr></thead><tbody>';
+
+  list.forEach(function(teacher) {
+    var d = teachers[teacher];
+    h += '<tr><td class="dyn-name">' + teacher + '</td>';
+    months.forEach(function(m) {
+      var val = d[m];
+      var isCur = (m === currentMonth);
+      if (val !== undefined) {
+        h += '<td' + (isCur ? ' class="dyn-cur-val"' : '') + '>' + val.toFixed(1) + '</td>';
+      } else {
+        h += '<td><span class="dyn-empty">—</span></td>';
+      }
+    });
+
+    // Тренд: текущий месяц vs ближайший предыдущий с данными
+    var cur = d[currentMonth];
+    var mi = months.indexOf(currentMonth);
+    var prev = null;
+    for (var i = mi - 1; i >= 0; i--) {
+      if (d[months[i]] !== undefined) { prev = d[months[i]]; break; }
+    }
+    var trend;
+    if (cur === undefined) {
+      trend = '<span class="dyn-empty">—</span>';
+    } else if (prev === null) {
+      trend = '<span class="dyn-new">новый</span>';
+    } else {
+      var diff = cur - prev;
+      var sign = diff >= 0 ? '+' : '';
+      if (diff > 0.4)       trend = '<span class="dyn-up">↑ ' + sign + diff.toFixed(1) + '</span>';
+      else if (diff < -0.4) trend = '<span class="dyn-dn">↓ ' + diff.toFixed(1) + '</span>';
+      else                  trend = '<span class="dyn-eq">→</span>';
+    }
+    h += '<td>' + trend + '</td></tr>';
+  });
+
+  h += '</tbody></table>';
+  return h;
+}
+
+function updateDynamics() {
+  document.querySelectorAll('.dynamics-container').forEach(function(el) {
+    var pg = el.closest('[id^="page-"]');
+    if (!pg) return;
+    // id вида "page-mai-nikitskaya" → берём последнюю часть
+    var studio = pg.id.replace(/^page-[\w]+-/, '');
+    el.innerHTML = renderDynamicsTable(studio);
+  });
+}
+
 </script>
 <script>
 (function () {
@@ -2724,5 +3651,6 @@ function toggleNormsLegend(btn) {
   btn.nextElementSibling.classList.toggle('open');
 }
 </script>
+<script>updateDynamics();</script>
 </body>
 </html>
