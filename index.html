@@ -777,20 +777,31 @@ tr.spec-highlight td {
 .norms-table td:first-child { text-align: left; font-weight: 500; }
 .norms-table td.null-norm { color: #bbb; }
 
-/* ── Таблица динамики по преподавателям ── */
+/* ── Таблица динамики посещаемости (новый стиль) ── */
 .dyn-table { width:100%; border-collapse:collapse; font-family:'Montserrat',sans-serif; font-size:13px; margin-bottom:1rem; }
-.dyn-table th { background:#2C2C2A; color:#FDF6F0; padding:8px 10px; text-align:center; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; white-space:nowrap; }
-.dyn-table th:first-child { text-align:left; min-width:160px; }
-.dyn-cur-hdr { background:#5C6937 !important; }
-.dyn-table td { padding:7px 10px; border-bottom:1px solid #EDE8E0; text-align:center; color:#2C2C2A; white-space:nowrap; }
-.dyn-table tr:nth-child(even) td { background:#FAF7F2; }
-.dyn-name { text-align:left !important; font-weight:600; color:#2C2C2A; }
-.dyn-cur-val { font-weight:700; color:#2C2C2A; }
-.dyn-empty { color:#ccc; font-weight:400; }
-.dyn-up { color:#5C6937; font-weight:700; }
-.dyn-dn { color:#c0392b; font-weight:700; }
-.dyn-eq { color:#999; font-weight:400; }
-.dyn-new { color:#F0803B; font-size:11px; }
+.dyn-table thead th {
+  background:#2C2C2A; color:#FDF6F0;
+  padding:9px 10px; text-align:center;
+  font-size:11px; letter-spacing:0.07em; text-transform:uppercase; white-space:nowrap;
+}
+.dyn-table thead th:first-child { text-align:left; min-width:165px; }
+.dyn-name { text-align:left !important; font-weight:600; color:#2C2C2A; padding:8px 10px; border-bottom:1px solid #EDE8E0; }
+.dyn-table tbody tr:nth-child(even) .dyn-name { background:#FAF7F2; }
+.dyn-cell {
+  padding:8px 10px; text-align:center; border-bottom:1px solid rgba(0,0,0,0.06);
+  font-weight:700; font-size:13px; white-space:nowrap;
+}
+.dyn-no-data { color:#ccc !important; font-weight:400; background:#fafafa !important; }
+/* norm colours – фон ячейки */
+.dyn-norm-star   { background:#d4edda; color:#155724; }
+.dyn-norm-star .dyn-val::after { content:' ★'; font-size:10px; vertical-align:super; color:#e8c600; }
+.dyn-norm-green  { background:#eef3e6; color:#3a5a1e; }
+.dyn-norm-orange { background:#fff3e0; color:#7a4000; }
+.dyn-norm-red    { background:#ffebee; color:#9b1c1c; }
+/* стрелки */
+.dyn-arrow { font-size:12px; margin-left:3px; }
+.dyn-arrow.up   { color:#1e6b00; }
+.dyn-arrow.down { color:#c0392b; }
 
 </style>
 </head>
@@ -1006,8 +1017,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1076,8 +1085,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1144,8 +1151,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1213,8 +1218,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary><table class="teachers-table">
 <thead><tr><th>Преподаватель</th><th>Класс</th><th>Занятий</th><th>Посетителей</th><th>Ср. посещ.</th></tr></thead>
@@ -1359,8 +1362,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1431,8 +1432,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1501,8 +1500,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -1574,8 +1571,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2380,8 +2375,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2452,8 +2445,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2523,8 +2514,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2596,8 +2585,6 @@ tr.spec-highlight td {
 </tbody></table></div>
 </div>
 <div class="section-card full-width" style="margin-top:1.5rem">
-<h3 class="card-title">Динамика посещаемости по преподавателям</h3>
-<div class="dynamics-container"></div>
 <h3 class="card-title">Аналитика по преподавателям</h3>
 <details><summary style="cursor:pointer;font-size:0.85rem;color:#5C6937;padding:0.3rem 0;">Показать / скрыть таблицу</summary>
 <table class="teachers-table">
@@ -2674,7 +2661,7 @@ function filterNormsTable(pageId) {
   });
 }
 
-/* ── Динамика по преподавателям ── */
+/* ── Динамика посещаемости по преподавателям ── */
 var DYNAMICS_DATA = {
   "dmitrovka": {
     "Рышков Александр": {
@@ -3465,63 +3452,70 @@ var DYNAMICS_DATA = {
   }
 };
 
+/* Опорные нормы (средняя по залам студии) */
+var DYN_NORM = {
+  'dmitrovka':       15,
+  'myasnitskaya':    10,
+  'chernyshevskaya': 12,
+  'nikitskaya':       8
+};
+
 function renderDynamicsTable(studioKey) {
   var teachers = DYNAMICS_DATA[studioKey];
   if (!teachers || Object.keys(teachers).length === 0)
     return '<p style="color:#999;font-size:13px">Нет данных</p>';
 
   var months = ['ian','fev','mart','apr','mai'];
-  var labels = {ian:'Янв',fev:'Фев',mart:'Март',apr:'Апр',mai:'Май'};
+  var labels = {ian:'Январь',fev:'Февраль',mart:'Март',apr:'Апрель',mai:'Май'};
+  var norm = DYN_NORM[studioKey] || 10;
 
-  // Сортируем: сначала у кого есть данные за текущий месяц (desc), затем по имени
+  /* Сортируем: сначала те, у кого есть май (по убыванию), потом остальные по имени */
   var list = Object.keys(teachers).sort(function(a, b) {
-    var av = (teachers[a][currentMonth] !== undefined) ? teachers[a][currentMonth] : -1;
-    var bv = (teachers[b][currentMonth] !== undefined) ? teachers[b][currentMonth] : -1;
+    var av = teachers[a]['mai'] !== undefined ? teachers[a]['mai'] : -1;
+    var bv = teachers[b]['mai'] !== undefined ? teachers[b]['mai'] : -1;
     if (bv !== av) return bv - av;
     return a.localeCompare(b, 'ru');
   });
 
-  var h = '<table class="dyn-table"><thead><tr>';
-  h += '<th>Преподаватель</th>';
+  var h = '<table class="dyn-table"><thead><tr><th>Преподаватель</th>';
   months.forEach(function(m) {
-    var isCur = (m === currentMonth);
-    h += '<th' + (isCur ? ' class="dyn-cur-hdr"' : '') + '>' + labels[m] + '</th>';
+    h += '<th>' + labels[m] + '</th>';
   });
-  h += '<th>Тренд</th></tr></thead><tbody>';
+  h += '</tr></thead><tbody>';
 
   list.forEach(function(teacher) {
     var d = teachers[teacher];
     h += '<tr><td class="dyn-name">' + teacher + '</td>';
-    months.forEach(function(m) {
+
+    months.forEach(function(m, mi) {
       var val = d[m];
-      var isCur = (m === currentMonth);
-      if (val !== undefined) {
-        h += '<td' + (isCur ? ' class="dyn-cur-val"' : '') + '>' + val.toFixed(1) + '</td>';
-      } else {
-        h += '<td><span class="dyn-empty">—</span></td>';
+      if (val === undefined) {
+        h += '<td class="dyn-cell dyn-no-data">—</td>';
+        return;
       }
+
+      /* Цвет по норме */
+      var pct = val / norm * 100;
+      var cls = pct > 95 ? 'dyn-norm-star' :
+                pct > 85 ? 'dyn-norm-green' :
+                pct >= 70 ? 'dyn-norm-orange' : 'dyn-norm-red';
+
+      /* Стрелка: сравниваем с ближайшим предыдущим месяцем с данными */
+      var prev = null;
+      for (var i = mi - 1; i >= 0; i--) {
+        if (d[months[i]] !== undefined) { prev = d[months[i]]; break; }
+      }
+      var arrow = '';
+      if (prev !== null) {
+        if (val - prev > 0.25)      arrow = '<span class="dyn-arrow up">↑</span>';
+        else if (prev - val > 0.25) arrow = '<span class="dyn-arrow down">↓</span>';
+      }
+
+      h += '<td class="dyn-cell ' + cls + '"><span class="dyn-val">' +
+           val.toFixed(1) + '</span>' + arrow + '</td>';
     });
 
-    // Тренд: текущий месяц vs ближайший предыдущий с данными
-    var cur = d[currentMonth];
-    var mi = months.indexOf(currentMonth);
-    var prev = null;
-    for (var i = mi - 1; i >= 0; i--) {
-      if (d[months[i]] !== undefined) { prev = d[months[i]]; break; }
-    }
-    var trend;
-    if (cur === undefined) {
-      trend = '<span class="dyn-empty">—</span>';
-    } else if (prev === null) {
-      trend = '<span class="dyn-new">новый</span>';
-    } else {
-      var diff = cur - prev;
-      var sign = diff >= 0 ? '+' : '';
-      if (diff > 0.4)       trend = '<span class="dyn-up">↑ ' + sign + diff.toFixed(1) + '</span>';
-      else if (diff < -0.4) trend = '<span class="dyn-dn">↓ ' + diff.toFixed(1) + '</span>';
-      else                  trend = '<span class="dyn-eq">→</span>';
-    }
-    h += '<td>' + trend + '</td></tr>';
+    h += '</tr>';
   });
 
   h += '</tbody></table>';
@@ -3532,7 +3526,6 @@ function updateDynamics() {
   document.querySelectorAll('.dynamics-container').forEach(function(el) {
     var pg = el.closest('[id^="page-"]');
     if (!pg) return;
-    // id вида "page-mai-nikitskaya" → берём последнюю часть
     var studio = pg.id.replace(/^page-[\w]+-/, '');
     el.innerHTML = renderDynamicsTable(studio);
   });
