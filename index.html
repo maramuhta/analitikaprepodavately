@@ -3605,8 +3605,7 @@ function renderDynamicsTable(studioKey) {
                ? studioNorms[teacher]
                : fallbackNorm;
 
-    h += '<tr><td class="dyn-name">' + teacher +
-         '<span class="dyn-norm-hint"> / ' + norm + '</span></td>';
+    h += '<tr><td class="dyn-name">' + teacher + '</td>';
 
     months.forEach(function(m, mi) {
       var val = d[m];
