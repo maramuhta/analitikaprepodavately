@@ -3606,7 +3606,7 @@ function renderDynamicsTable(studioKey) {
                : fallbackNorm;
 
     h += '<tr><td class="dyn-name">' + teacher +
-         '<span class="dyn-norm-hint"> / ' + Number.isInteger(norm) ? norm : norm.toFixed(1) + '</span></td>';
+         '<span class="dyn-norm-hint"> / ' + norm + '</span></td>';
 
     months.forEach(function(m, mi) {
       var val = d[m];
