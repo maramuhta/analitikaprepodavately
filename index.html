@@ -866,12 +866,12 @@ tr.spec-highlight td {
 </tr>
 </thead>
 <tbody>
-<tr data-hall="dmitrovka"><td>Луна</td><td>10</td><td>15</td><td>15</td><td>25</td><td>25</td></tr>
-<tr data-hall="dmitrovka"><td>Солнце</td><td>10</td><td>10</td><td>10</td><td>15</td><td>15</td></tr>
-<tr data-hall="myasnitskaya"><td>Юпитер</td><td>10</td><td>10</td><td>10</td><td>19</td><td>19</td></tr>
-<tr data-hall="myasnitskaya"><td>Сатурн</td><td>10</td><td>8</td><td>8</td><td>14</td><td>14</td></tr>
-<tr data-hall="chernyshevskaya"><td>Галактика</td><td>10</td><td>12</td><td>12</td><td>20</td><td>20</td></tr>
-<tr data-hall="chernyshevskaya"><td>Марс</td><td class="null-norm">—</td><td>8</td><td>8</td><td>14</td><td>14</td></tr>
+<tr data-hall="dmitrovka"><td>Луна</td><td>15</td><td>15</td><td>15</td><td>25</td><td>25</td></tr>
+<tr data-hall="dmitrovka"><td>Солнце</td><td>15</td><td>10</td><td>10</td><td>15</td><td>15</td></tr>
+<tr data-hall="myasnitskaya"><td>Юпитер</td><td>15</td><td>10</td><td>10</td><td>19</td><td>19</td></tr>
+<tr data-hall="myasnitskaya"><td>Сатурн</td><td>15</td><td>8</td><td>8</td><td>14</td><td>14</td></tr>
+<tr data-hall="chernyshevskaya"><td>Галактика</td><td>12</td><td>12</td><td>12</td><td>20</td><td>20</td></tr>
+<tr data-hall="chernyshevskaya"><td>Марс</td><td>12</td><td>8</td><td>8</td><td>14</td><td>14</td></tr>
 <tr data-hall="nikitskaya"><td>Звезда</td><td>10</td><td>5</td><td>6</td><td>13</td><td>13</td></tr>
 <tr data-hall="nikitskaya"><td>Сияние</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
 </tbody>
@@ -3819,7 +3819,7 @@ var DYNAMICS_DATA = {
 var TEACHER_NORMS = {
   "dmitrovka": {
     "Назарова Даша": 25,
-    "Шарапова Виктория": 10,
+    "Шарапова Виктория": 15,
     "Кашанги Мария": 15,
     "Атаманова Елена": 25,
     "Васильева Алина": 25,
@@ -3856,7 +3856,7 @@ var TEACHER_NORMS = {
     "Никитина Евгения": 19,
     "Павлов Юрий": 19,
     "Юдина Настя": 19,
-    "Шалимова Мария": 10,
+    "Шалимова Мария": 15,
     "Обухова Анастасия": 10,
     "Пак Феликс": 19,
     "Родина Любовь": 19,
@@ -3867,7 +3867,7 @@ var TEACHER_NORMS = {
     "Барабаш Татьяна": 10,
     "Хейлик Юлия": 10,
     "Попова Ксения": 14,
-    "Березкина Олеся": 10,
+    "Березкина Олеся": 15,
     "Пелунская Екатерина": 19,
     "Зареченская Мария": 14,
     "Васильева Алина": 10,
@@ -3881,7 +3881,7 @@ var TEACHER_NORMS = {
     "Грачева Александра": 8,
     "Зеленая Мария": 8,
     "Иванова Мария": 14,
-    "Барышников Дмитрий": 10,
+    "Барышников Дмитрий": 15,
     "Минина Наталья": 14,
     "Подгорнова Юлия": 14,
     "Лисецкая Арина": 14,
@@ -3891,7 +3891,7 @@ var TEACHER_NORMS = {
     "Казакова Анна": 20,
     "Туманов Иван": 20,
     "Вейос Ярослав": 14,
-    "Соболевская Арина": 10,
+    "Соболевская Арина": 12,
     "Болсуновская Анна": 12,
     "Панькина Ольга": 20,
     "Лунегова Александра": 12,
@@ -3902,7 +3902,7 @@ var TEACHER_NORMS = {
     "Болтян Андрей": 12,
     "Спасенко Ольга": 14,
     "Грунтовская Алевтина": 12,
-    "Зинурова Наталья": 10,
+    "Зинурова Наталья": 12,
     "Монахова Дарья": 20,
     "Задорожный Олег": 12,
     "Кахиани Лика": 14,
@@ -4066,12 +4066,12 @@ function colorScheduleCells() {
 <script>
 (function () {
   var HALL_NORMS = {
-    'Луна':      { maysor: 10, morning: 15, day: 15, evening: 25, weekend: 25 },
-    'Солнце':    { maysor: 10, morning: 10, day: 10, evening: 15, weekend: 15 },
-    'Юпитер':   { maysor: 10, morning: 10, day: 10, evening: 19, weekend: 19 },
-    'Сатурн':   { maysor: 10, morning:  8, day:  8, evening: 14, weekend: 14 },
-    'Галактика': { maysor: 10, morning: 12, day: 12, evening: 20, weekend: 20 },
-    'Марс':      { maysor: null, morning: 8, day:  8, evening: 14, weekend: 14 },
+    'Луна':      { maysor: 15, morning: 15, day: 15, evening: 25, weekend: 25 },
+    'Солнце':    { maysor: 15, morning: 10, day: 10, evening: 15, weekend: 15 },
+    'Юпитер':   { maysor: 15, morning: 10, day: 10, evening: 19, weekend: 19 },
+    'Сатурн':   { maysor: 15, morning:  8, day:  8, evening: 14, weekend: 14 },
+    'Галактика': { maysor: 12, morning: 12, day: 12, evening: 20, weekend: 20 },
+    'Марс':      { maysor: 12, morning: 8, day:  8, evening: 14, weekend: 14 },
     'Звезда':    { maysor: 10, morning:  5, day:  6, evening: 13, weekend: 13 },
     'Сияние':    { maysor:  4, morning:  4, day:  4, evening:  4, weekend:  4 },
   };
